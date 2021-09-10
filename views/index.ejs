@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Index ChatApp</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="http://localhost:80/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div class="big_container">
+      <div class="head">
+        <h1>ChatApp</h1>
+        <p><%=name%></p>
+      </div>
+      <div id="room_container"></div>
+    </div>
+    <div class="small_container">
+      <div class="head">
+        <p>Your Id: <%=id%></p>
+        <a href="/logout" class="logout_a"
+          ><span class="logout">Logout</span></a
+        >
+      </div>
+      <input
+        type="number"
+        id="search"
+        placeholder="Type the id of your friend"
+      /><br />
+      <button id="search-btn">Search</button>
+      <div class="user_container"></div>
+    </div>
+
+    <script>
+      let user_name = "<%= name %>";
+      let id = "<%= id %>";
+      let rooms = <%-JSON.stringify(rooms)%>;
+    </script>
+    <script src="app.js"></script>
+  </body>
+</html>

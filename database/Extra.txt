@@ -1,0 +1,3 @@
+  
+MONGO=mongodb+srv://Admin:Admin123@cluster0-yxm6w.mongodb.net/test?retryWrites=true&w=majority
+SECRET=dsajkvghvbgvhjsdavkjdbvkhcjbdskvhdsjkvbjksdjsfhvjkfdgsfgvj

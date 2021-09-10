@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Room ChatApp</title>
+    <link rel="stylesheet" href="room.css" />
+    <script src="http://localhost:80/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="head">
+        <div class="circle"></div>
+        <p id="user_name"></p>
+      </div>
+      <div id="mssz-container"></div>
+      <form id="input-container">
+        <input type="text" id="input" />
+        <button type="submit" id="btn">Send</button>
+      </form>
+    </div>
+    <script>
+      let roomName = "<%= roomName %>";
+      let user_name = "<%= user_name %>";
+      let Users= <%-JSON.stringify(Users)%>;
+      let rooms = <%-JSON.stringify(rooms)%>;
+    </script>
+    <script src="home_js.js"></script>
+  </body>
+</html>
